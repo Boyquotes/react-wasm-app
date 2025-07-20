@@ -22,6 +22,16 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
+}
+
+.connected-wallet-banner {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .App-link {
@@ -35,4 +45,368 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* WASM Demo Styles */
+.demo-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 800px;
+}
+
+.section {
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  padding: 25px;
+  border: 2px solid #444;
+}
+
+.section h2 {
+  color: #61dafb;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.wasm-demo {
+  width: 100%;
+}
+
+.wasm-button-container {
+  background-color: #3c4043;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 2px solid #61dafb;
+}
+
+.status-info {
+  margin-bottom: 20px;
+}
+
+.status-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.error-message {
+  color: #ff6b6b;
+  background-color: #4a1f1f;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ff6b6b;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wasm-button {
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wasm-button:hover:not(:disabled) {
+  background-color: #4fa8c5;
+}
+
+.wasm-button:disabled {
+  background-color: #666;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.wasm-button.secondary {
+  background-color: #666;
+  color: white;
+}
+
+.wasm-button.secondary:hover:not(:disabled) {
+  background-color: #555;
+}
+
+.messages-section {
+  margin-top: 30px;
+}
+
+.messages-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.messages-header h3 {
+  margin: 0;
+  color: #61dafb;
+}
+
+.clear-button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+  background-color: #ff5252;
+}
+
+.messages-container {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 100px;
+  border: 1px solid #444;
+}
+
+.no-messages {
+  color: #888;
+  font-style: italic;
+  margin: 0;
+}
+
+.messages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.message-item {
+  background-color: #2d2d2d;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.message-index {
+  background-color: #61dafb;
+  color: #282c34;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.message-text {
+  color: #fff;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+/* Solana Wallet Styles */
+.solana-wallet-container {
+  background-color: #3c4043;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid #f4a261;
+}
+
+.wallet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.wallet-header h3 {
+  margin: 0;
+  color: #f4a261;
+  font-size: 20px;
+}
+
+.wallet-status {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status-connected {
+  color: #4caf50;
+}
+
+.status-disconnected {
+  color: #f44336;
+}
+
+.wallet-availability {
+  margin-bottom: 20px;
+}
+
+.wallet-availability h4 {
+  color: #f4a261;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+.available-wallets ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wallet-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #2d2d2d;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.wallet-icon {
+  font-size: 12px;
+}
+
+.wallet-name {
+  color: #fff;
+  font-weight: 500;
+}
+
+.no-wallets {
+  color: #ffab00;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.no-wallets a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.no-wallets a:hover {
+  text-decoration: underline;
+}
+
+.wallet-actions {
+  margin-bottom: 15px;
+}
+
+.connect-button {
+  background-color: #f4a261;
+  color: #282c34;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.connect-button:hover:not(:disabled) {
+  background-color: #e76f51;
+}
+
+.connect-button:disabled {
+  background-color: #666;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.connected-wallet {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wallet-info {
+  background-color: #2d2d2d;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #444;
+}
+
+.wallet-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.wallet-detail:last-child {
+  margin-bottom: 0;
+}
+
+.wallet-detail .label {
+  color: #f4a261;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.wallet-detail .value {
+  color: #fff;
+  font-size: 14px;
+}
+
+.wallet-detail .address {
+  font-family: monospace;
+  background-color: #1e1e1e;
+  padding: 4px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.disconnect-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.disconnect-button:hover {
+  background-color: #d32f2f;
+}
+
+.refresh-button {
+  background-color: #666;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.refresh-button:hover:not(:disabled) {
+  background-color: #555;
+}
+
+.refresh-button:disabled {
+  background-color: #444;
+  color: #888;
+  cursor: not-allowed;
 }
