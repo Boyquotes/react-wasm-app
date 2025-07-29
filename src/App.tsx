@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import WasmButton from './WasmButton';
+import UseBinding from './UseBinding';
 import SolanaWallet from './SolanaWallet';
 import { WalletInfo } from 'rust-wasm-sdk';
 
@@ -56,6 +57,7 @@ function App() {
             <h2>WASM Functions</h2>
             <div className="wasm-demo">
               <WasmButton onMessage={handleMessage} />
+              <UseBinding />
             </div>
           </div>
         </div>
